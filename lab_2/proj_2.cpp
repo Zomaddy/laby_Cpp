@@ -13,7 +13,7 @@ int main(){
     
     std::cout << "Your word in reverse: ";
     
-    for (int i = wordSize; i > -1; --i){
+    for (int i = wordSize - 1; i >= 0; --i){
         std::cout << word[i];
     }
 
