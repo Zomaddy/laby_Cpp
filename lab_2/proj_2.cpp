@@ -9,7 +9,6 @@ int main(){
     std::cout << "Enter a word: ";
     std::cin >> word;
     int wordSize = word.size();
-    //std::cout << wordSize << std::endl;
     
     std::cout << "Your word in reverse: ";
     
