@@ -12,19 +12,16 @@ int main(){
     int userNumber {};
 
     std::cout << "Enter a number from 1 to 100: " << std::endl;
-    std::cin >> userNumber;
 
-    if (userNumber != randomNumber){
-        do{
-            if (userNumber < randomNumber){
-                std::cout << "The number is too low. Try again!" << std::endl;
-                std::cin >> userNumber;
-            }
-            else if (userNumber > randomNumber){
-                std::cout << "The number is too high. Try again!" << std::endl;
-                std::cin >> userNumber;
-            }            
-        }while (userNumber != randomNumber); 
-    }
+    do{
+        std::cin >> userNumber;
+        if (userNumber < randomNumber){
+            std::cout << "The number is too low. Try again!" << std::endl;
+        }
+        else if (userNumber > randomNumber){
+            std::cout << "The number is too high. Try again!" << std::endl;
+        }            
+    }while (userNumber != randomNumber); 
+
     return 0;
 }

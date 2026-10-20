@@ -2,19 +2,17 @@
 
 int main(){
 
-    int x {};
     int arr[5] = {};
 
-    std::cout << "Enter the number: " << std::endl;
+    std::cout << "Enter 5 numbers: " << std::endl;
 
-    for(int i = 0; i < 5; i++){
-        std::cin >> x;
-        arr[i] = x;
+    for(int i = 0; i < 5; ++i){
+        std::cin >> arr[i];
     }
 
     std::cout << "Your numbers: " << std::endl;
 
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < 5; ++i){
         std::cout << arr[i] << std::endl;
     }    
 
