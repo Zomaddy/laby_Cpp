@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 
-int sumOfElements(std::vector<std::vector<int>> matrix){
+int sumOfElements(const std::vector<std::vector<int>>& matrix){
     int sum{0};
 
     for(int i = 0; i < matrix.size(); ++i){
@@ -26,6 +26,11 @@ int main() {
     std::cin >> row;
     std::cout << "Enter a number of columns in your matrix: ";
     std::cin >> column;
+
+    if(row < 0 || column < 0){
+        return 1;
+    }
+
     std::vector<std::vector<int>> matrix(row, std::vector<int>(column));
 
     std::cout << "Your matrix: " << std::endl;

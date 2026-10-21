@@ -14,15 +14,15 @@ int main(){
 
     for(int i = 0; i < sentence.size(); ++i){
 
-    if(std::isupper(sentence[i])){
-        sentence[i] = std::tolower(sentence[i]);
-    }
+        if(std::isupper(sentence[i])){
+            sentence[i] = std::tolower(sentence[i]);
+        }
 
-    if(sentence[i] == letter){
-        sum += 1;
-    }
+        if(sentence[i] == letter){
+            sum += 1;
+        }
 
-}
+    }
     std::cout << sentence << std::endl;
 
     std::cout << "Your chosen letter repeats " << sum << " times" << std::endl;
