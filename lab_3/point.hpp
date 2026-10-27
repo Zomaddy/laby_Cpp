@@ -2,10 +2,10 @@
 
 class Point {
     public:
-        float coorX {};
-        float coorY {};
+        double coorX {};
+        double coorY {};
 
-        Point(float x, float y) : coorX(x), coorY(y){
+        Point(double x, double y) : coorX(x), coorY(y){
         }
 
         void display() const {
