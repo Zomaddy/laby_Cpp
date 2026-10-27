@@ -2,8 +2,8 @@
 
 class Point {
     public:
-        double coorX {};
-        double coorY {};
+        double coorX;
+        double coorY;
 
         Point(double x, double y) : coorX(x), coorY(y){
         }
