@@ -3,14 +3,14 @@
 
 class MyClass{
     private:
-        std::string objectName;
+        std::string m_objectName;
 
     public:
-        MyClass(std::string name) : objectName(name){
-            std::cout << "Constructor of " << objectName << " called" << std::endl;
+        MyClass(std::string name) : m_objectName(name){
+            std::cout << "Constructor of " << m_objectName << " called" << std::endl;
         }
         ~MyClass(){
-            std::cout << "Destructor of " << objectName << " called" << std::endl;
+            std::cout << "Destructor of " << m_objectName << " called" << std::endl;
         }
 };
 

@@ -25,7 +25,7 @@ class Circle {
                 std::cout << "Incorrect value!" << std::endl;
             }
             else{
-            *radius = r;
+                *radius = r;
             }
         }        
 
