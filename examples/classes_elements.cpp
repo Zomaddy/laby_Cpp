@@ -13,7 +13,7 @@ class Student {
                 std::cout << "Incorrect value!" << std::endl;
             }
             else{
-            m_age = a;
+                m_age = a;
             }
         }
         int getAge() const {
@@ -24,7 +24,7 @@ class Student {
                 std::cout << "Incorrect value!" << std::endl;
             }
             else{
-            m_name = n;
+                m_name = n;
             }
         }
         std::string getName() const {
