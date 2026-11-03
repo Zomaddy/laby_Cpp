@@ -22,8 +22,6 @@ int main() {
     std::cout << "Center of the circle: (" << circle.figureCenter.x << ", " << circle.figureCenter.y << "), radius: " << circle.getRadius() << " and its area: " 
         << circle.area() << std::endl;
 
-
-
     return 0;
 }
 

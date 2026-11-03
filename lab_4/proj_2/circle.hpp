@@ -3,6 +3,7 @@
 #include <iostream>
 #include "figure.hpp"
 #include <cmath>
+#include <stdexcept>
 
 class Circle : public Figure {
 private:
@@ -10,6 +11,9 @@ private:
 
 public:
     Circle(const Point &p, double radius) : Figure(p), m_r(radius){
+        if(m_r <= 0){
+            throw std::invalid_argument("Incorrect value!");
+        }
     }
 
     double area() override {

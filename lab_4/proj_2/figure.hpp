@@ -3,13 +3,13 @@
 #include "point.hpp"
 
 class Figure {
-    public:
-        Point figureCenter;
+public:
+    Point figureCenter;
 
-        Figure(const Point &p) : figureCenter(p){
-        }
+    Figure(const Point &p) : figureCenter(p) {
+    }
 
-        virtual double area() = 0;
+    virtual double area() = 0;
 };
 
 
