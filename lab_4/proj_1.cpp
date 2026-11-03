@@ -1,24 +1,23 @@
 #include <iostream>
 
 class Animal {
-    public:
-        virtual void makeSound() {
-            std::cout << "The sound of animal " << std::endl;
-        }
+public:
+    virtual void makeSound() {
+    }
 };
 
 class Dog : public Animal {
-    public:
-        void makeSound() override {
-            std::cout << "Woof!" << std::endl;
-        }
+public:
+    void makeSound() override {
+        std::cout << "Woof!" << std::endl;
+    }
 };
 
-class Cat : public Animal {
-    public:
-        void makeSound() override {
-            std::cout << "Meow!" << std::endl;
-        }
+class Cat : public Animal {    
+public:
+    void makeSound() override {
+        std::cout << "Meow!" << std::endl;
+    }
 };
 
 Animal *chooseAnimal(int number) {
