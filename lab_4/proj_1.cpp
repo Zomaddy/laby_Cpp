@@ -2,12 +2,16 @@
 
 class Animal {
 public:
+    virtual ~Animal(){
+    }
     virtual void makeSound() {
     }
 };
 
 class Dog : public Animal {
 public:
+    ~Dog(){
+    }
     void makeSound() override {
         std::cout << "Woof!" << std::endl;
     }
@@ -15,6 +19,8 @@ public:
 
 class Cat : public Animal {    
 public:
+    ~Cat(){
+    }
     void makeSound() override {
         std::cout << "Meow!" << std::endl;
     }
