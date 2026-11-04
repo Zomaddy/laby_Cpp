@@ -8,5 +8,8 @@ public:
 
     Point(double coorX, double coorY) : x(coorX), y(coorY){
     }
+
+    ~Point(){
+    }
 };
 

@@ -9,6 +9,9 @@ public:
     Figure(const Point &p) : figureCenter(p) {
     }
 
+    virtual ~Figure(){
+    }
+
     virtual double area() = 0;
 };
 

@@ -16,6 +16,9 @@ public:
         }
     }
 
+    ~Circle() {
+    }
+
     double area() override {
         return M_PI * m_r * m_r;
     }

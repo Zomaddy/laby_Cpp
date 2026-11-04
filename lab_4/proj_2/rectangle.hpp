@@ -15,6 +15,9 @@ public:
         }
     }
 
+    ~Rectangle(){
+    }
+
     double area() override {
         return m_a * m_b;
     }
