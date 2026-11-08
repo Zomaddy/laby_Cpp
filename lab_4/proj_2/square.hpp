@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "rectangle.hpp"
 
 class Square : public Rectangle {

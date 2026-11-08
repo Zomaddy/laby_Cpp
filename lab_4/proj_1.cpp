@@ -4,8 +4,7 @@ class Animal {
 public:
     virtual ~Animal(){
     }
-    virtual void makeSound() {
-    }
+    virtual void makeSound() = 0;
 };
 
 class Dog : public Animal {
