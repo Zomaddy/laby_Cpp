@@ -63,7 +63,7 @@ public:
     }
 
     friend std::ostream& operator<<(std::ostream& os, const ComplexNumber& c) {
-        os << c.re << (c.im >= 0 ? "+" : "-") << std::abs(c.im) << "i";
+        os << c.re << (c.im >= 0 ? " + " : " - ") << std::abs(c.im) << "i";
         return os;
     }
 };
