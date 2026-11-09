@@ -12,6 +12,9 @@ int main() {
     std::cout << "c1: " << c1 << std::endl;
     std::cout << "c2: " << c2 << std::endl;
     std::cout << "c1 + c2 = " << c3 <<  std::endl;
+    double someNumber = 13.3;
+    std::cout << "number: " << someNumber << std::endl;
+    std::cout << "c1 + number = " << c1 + someNumber << std::endl;
     std::cout << std::endl;
 
     //operator-
@@ -20,6 +23,8 @@ int main() {
     std::cout << "c1: " << c1 << std::endl;
     std::cout << "c2: " << c2 << std::endl;
     std::cout << "c1 - c2 = " << c4 << std::endl;
+    std::cout << "number: " << someNumber << std::endl;
+    std::cout << "c1 - number = " << c1 - someNumber << std::endl;
     std::cout << std::endl;
     
     //operator*
@@ -44,6 +49,9 @@ int main() {
     std::cout << "c1: " << c1 << std::endl;
     c2 += c1;
     std::cout << "c2 += c1: " << c2 << std::endl;
+    std::cout << "number: " << someNumber << std::endl;
+    c1 += someNumber;
+    std::cout << "c1 += number: " << c1 << std::endl;
     std::cout << std::endl;
 
     //operator-=
@@ -52,6 +60,9 @@ int main() {
     std::cout << "c1: " << c1 << std::endl;
     c2 -= c1;
     std::cout << "c2 -= c1: " << c2 << std::endl;
+    std::cout << "number: " << someNumber << std::endl;
+    c1 -= someNumber;
+    std::cout << "c1 -= number: " << c1 << std::endl;
     std::cout << std::endl;
 
     //operator*=

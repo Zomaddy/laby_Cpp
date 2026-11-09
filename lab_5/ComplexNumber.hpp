@@ -13,6 +13,14 @@ public:
         return ComplexNumber(re + other.re, im + other.im);
     }
 
+    friend ComplexNumber operator+(const ComplexNumber& c, double number) {
+        return ComplexNumber(c.re + number, c.im);
+    }
+
+    friend ComplexNumber operator+(double number, const ComplexNumber& c) {
+        return ComplexNumber(number + c.re, c.im);
+    }
+
     ComplexNumber operator-(const ComplexNumber& other) const {
         return ComplexNumber(re - other.re, im - other.im);
     }
