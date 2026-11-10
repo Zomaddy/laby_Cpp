@@ -26,16 +26,22 @@ public:
     }
 
     ComplexNumber operator*(const ComplexNumber& other) const {
-        return ComplexNumber(re * other.re, im * other.im);
+        double real = (re * other.re) - (im * other.im);
+        double imag = (re * other.im) + (im * other.re);
+
+        return ComplexNumber(real, imag);
     }
 
     ComplexNumber operator/(const ComplexNumber& other) const {
-        if ((other.re || other.im) == 0) {
+        double denominator = (other.re * other.re) + (other.im * other.im);
+
+        if (denominator == 0) {
             throw std::invalid_argument("Don't divide by 0!");
         }
-        else {
-            return ComplexNumber(re / other.re, im / other.im);
-        }
+        double numeratorRe = (re * other.re) + (im * other.im);
+        double numeratorIm = (im * other.re) - (re * other.im);
+        
+        return ComplexNumber(numeratorRe, numeratorIm);
     }
 
     ComplexNumber& operator+=(const ComplexNumber& other) {
@@ -51,16 +57,27 @@ public:
     }
 
     ComplexNumber& operator*=(const ComplexNumber& other) {
-        re *= other.re;
-        im *= other.im;
+        double real = (re * other.re) - (im * other.im);
+        double imag = (re * other.im) + (im * other.re);
+        re = real;
+        im = imag;
         return *this;
     }
 
     ComplexNumber& operator/=(const ComplexNumber& other) {
-        re /= other.re;
-        im /= other.im;
+        double denominator = (other.re * other.re) + (other.im * other.im);
+
+        if (denominator == 0) {
+            throw std::invalid_argument("Don't divide by 0!");
+        }
+        double numeratorRe = (re * other.re) + (im * other.im);
+        double numeratorIm = (im * other.re) - (re * other.im);
+        re = numeratorRe/denominator;
+        im = numeratorIm/denominator;
+
         return *this;
     }
+
 
     bool operator==(const ComplexNumber& other) const {
         return (re == other.re && im == other.im);
